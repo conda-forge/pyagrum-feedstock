@@ -1,4 +1,4 @@
-{% set version = "0.9.2" %}
+{% set version = "0.9.3" %}
 
 package:
   name: pyagrum
@@ -8,14 +8,14 @@ source:
   git_url: git://forge.lip6.fr/aGrUM
   git_tag: {{ version }}
   patches:
-    - fix-python-detection.patch  # fixed in master
+    - fix-python-detection.patch
+    - dont-rebuild-lib.patch
+    - gcc48.patch
 
 build:
   number: 0
-
-  # windows support in master
-  # osx is unsupported
-  skip: true  # [win or osx]
+  # only linux is supported
+  skip: true  # [osx or win]
 
 requirements:
   build:
@@ -36,10 +36,9 @@ test:
 about:
   home: https://forge.lip6.fr/projects/aGrUM/wiki
   license: GPLv3
-  license_file: src/Copyright.txt
+  license_file: COPYRIGHT.txt
   summary: C++ Bayesian networks library
 
 extra:
   recipe-maintainers:
     - jschueller
-
