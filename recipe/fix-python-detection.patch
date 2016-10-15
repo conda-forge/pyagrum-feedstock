@@ -1,5 +1,5 @@
 diff --git a/wrappers/pyAgrum/CMakeLists.txt b/wrappers/pyAgrum/CMakeLists.txt
-index c4fd55a..934a33a 100644
+index 5348ac3..908e778 100644
 --- wrappers/pyAgrum/CMakeLists.txt
 +++ wrappers/pyAgrum/CMakeLists.txt
 @@ -5,35 +5,7 @@ if (POLICY CMP0018)
@@ -39,3 +39,44 @@ index c4fd55a..934a33a 100644
  
  execute_process(
    COMMAND ${PYTHON_EXECUTABLE} -c "import distutils.sysconfig; print(distutils.sysconfig.get_python_inc())"
+@@ -59,39 +31,7 @@ execute_process(
+   OUTPUT_STRIP_TRAILING_WHITESPACE
+ )
+ 
+-# maybe something to do for MAC ???
+- if (APPLE) # let's assume that PYTHON is there
+-   execute_process(
+-     COMMAND ${PYTHON_EXECUTABLE} -c "from distutils import sysconfig; print((sysconfig.get_config_vars('prefix'))[0])"
+-     OUTPUT_VARIABLE PYTHON_LOCAL_PATH
+-     OUTPUT_STRIP_TRAILING_WHITESPACE
+-   )
+-   execute_process(
+-     COMMAND ${PYTHON_EXECUTABLE} -c "from distutils import sysconfig; print((sysconfig.get_config_vars('LIBDIR'))[0])"
+-     OUTPUT_VARIABLE PYTHON_LIBPATH
+-     OUTPUT_STRIP_TRAILING_WHITESPACE
+-   )
+-
+-  set(PYTHON_LIBRARY "${PYTHON_LIBPATH}/libPython${PYTHON_COMPLETE_VERSION}.dylib")
+-  set(PYTHONLIBS_VERSION_STRING ${PYTHON_COMPLETE_VERSION})
+- else()
+-   if (WIN32)
+-	   execute_process(
+-		 COMMAND ${PYTHON_EXECUTABLE} -c "from distutils import sysconfig; print((sysconfig.get_config_vars('BINDIR'))[0])"
+-		 OUTPUT_VARIABLE PYTHON_LOCAL_PATH
+-		 OUTPUT_STRIP_TRAILING_WHITESPACE
+-	   )
+-	   execute_process(
+-		 COMMAND ${PYTHON_EXECUTABLE} -c "from distutils import sysconfig; print((sysconfig.get_config_vars('BINDIR'))[0])"
+-		 OUTPUT_VARIABLE PYTHON_LIBPATH
+-		 OUTPUT_STRIP_TRAILING_WHITESPACE
+-	   )
+-	  set(PYTHON_LIBRARY "${PYTHON_LOCAL_PATH}/libs/python${PYTHON_COMPLETE_VERSION}.lib")
+-    set(PYTHONLIBS_VERSION_STRING ${PYTHON_COMPLETE_VERSION})
+-   else()
+-	find_package(PythonLibs ${PYTHON_COMPLETE_VERSION} REQUIRED)
+-   endif()
+- endif()
++find_package(PythonLibs REQUIRED)
+ 
+ if (${PYTHON_VERSION} EQUAL "2")
+   #change in module naming from inside module between python2 and python3
