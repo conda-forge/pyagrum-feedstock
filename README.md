@@ -11,6 +11,18 @@ Summary: C++ Bayesian networks library
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyagrum-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyagrum-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyagrum-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyagrum-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pyagrum-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pyagrum-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyagrum/badges/version.svg)](https://anaconda.org/conda-forge/pyagrum)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyagrum/badges/downloads.svg)](https://anaconda.org/conda-forge/pyagrum)
+
 Installing pyagrum
 ==================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `pyagrum` available on your platfo
 ```
 conda search pyagrum --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyagrum-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyagrum-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyagrum-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyagrum-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pyagrum-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pyagrum-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyagrum/badges/version.svg)](https://anaconda.org/conda-forge/pyagrum)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyagrum/badges/downloads.svg)](https://anaconda.org/conda-forge/pyagrum)
 
 
 Updating pyagrum-feedstock
