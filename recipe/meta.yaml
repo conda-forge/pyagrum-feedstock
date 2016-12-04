@@ -1,4 +1,4 @@
-{% set version = "0.9.3" %}
+{% set version = "0.10.0" %}
 
 package:
   name: pyagrum
@@ -11,8 +11,6 @@ source:
     - fix-python-detection.patch
     - dont-rebuild-lib.patch
     - gcc48.patch
-    - define-PYTHON_INSTALL.patch
-    - fix-pyagrum-install.patch
 
 build:
   number: 0
@@ -28,7 +26,6 @@ requirements:
     - python
     - numpy
     - cmake
-
   run:
     - python
     - numpy
