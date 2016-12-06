@@ -11,9 +11,10 @@ source:
     - fix-python-detection.patch
     - dont-rebuild-lib.patch
     - gcc48.patch
+    - notebook-py2.patch
 
 build:
-  number: 0
+  number: 1
   features:
     - vc14  # [win and py35]
   skip: true  # [win and (py27 or py34)]
@@ -30,10 +31,18 @@ requirements:
     - python
     - numpy
     - libgcc  # [osx]
+    - pydotplus
+    - matplotlib
 
 test:
+  requires:
+    - ipython
   imports:
     - pyAgrum
+    - pyAgrum.lib.bn2csv
+    - pyAgrum.lib.bn2roc
+    - pyAgrum.lib.dynamicBN
+    - pyAgrum.lib.notebook
 
 about:
   home: https://forge.lip6.fr/projects/aGrUM/wiki
