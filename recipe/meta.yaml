@@ -1,4 +1,4 @@
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: pyagrum
@@ -8,10 +8,7 @@ source:
   git_url: git://forge.lip6.fr/aGrUM
   git_tag: {{ version }}
   patches:
-    - fix-python-detection.patch
-    - dont-rebuild-lib.patch
-    - gcc48.patch
-    - notebook-py2.patch
+    - 0001-Allow-to-define-PYTHON_INSTALL.patch
 
 build:
   number: 1
