@@ -1,6 +1,5 @@
 
-mkdir build
-cd build
+mkdir build && cd build
 
 set CMAKE_CONFIG="Release"
 
