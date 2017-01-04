@@ -1,6 +1,5 @@
 
-mkdir build
-cd build
+mkdir build && cd build
 
 set CMAKE_CONFIG="Release"
 
@@ -14,3 +13,5 @@ if errorlevel 1 exit 1
 
 cmake --build . --config %CMAKE_CONFIG% --target INSTALL
 if errorlevel 1 exit 1
+
+%PYTHON% ..\wrappers\pyAgrum\testunits\TestSuite.py || echo nook
