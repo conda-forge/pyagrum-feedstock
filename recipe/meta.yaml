@@ -1,5 +1,6 @@
 {% set version = "0.10.3" %}
 
+
 package:
   name: pyagrum
   version: {{ version }}
@@ -12,7 +13,7 @@ build:
   number: 0
   features:
     - vc14  # [win and py35]
-  skip: true  # [win and (py27 or py34)]
+  skip: true  # [win and py < 35]
 
 requirements:
   build:
