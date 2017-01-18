@@ -9,10 +9,10 @@ source:
   git_tag: {{ version }}
 
 build:
-  number: 0
+  number: 1
   features:
-    - vc14  # [win and py35]
-  skip: true  # [win and (py27 or py34)]
+    - vc14  # [win and py>=35]
+  skip: true  # [win and py<35]
 
 requirements:
   build:
