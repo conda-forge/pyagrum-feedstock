@@ -8,3 +8,4 @@ cmake \
   ..
 make install -j${CPU_COUNT}
 ${PYTHON} ../wrappers/pyAgrum/testunits/TestSuite.py || echo "nook"
+${PYTHON} -c "from pyAgrum import *"
