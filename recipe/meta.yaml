@@ -1,4 +1,4 @@
-{% set version = "0.10.3" %}
+{% set version = "0.10.4" %}
 
 package:
   name: pyagrum
@@ -7,9 +7,11 @@ package:
 source:
   git_url: git://forge.lip6.fr/aGrUM
   git_tag: {{ version }}
+  patches:
+    - scipy.patch
 
 build:
-  number: 1
+  number: 0
   features:
     - vc14  # [win and py>=35]
   skip: true  # [win and py<35]
