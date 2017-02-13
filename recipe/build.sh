@@ -7,4 +7,5 @@ cmake \
   -DFOR_PYTHON3=${PY3K} \
   ..
 make install -j${CPU_COUNT}
-${PYTHON} ../wrappers/pyAgrum/testunits/TestSuite.py || echo "nook"
+LD_LIBRARY_PATH=${PREFIX}/lib ldd ${SP_DIR}/pyAgrum/_pyAgrum.so
+LD_LIBRARY_PATH=${PREFIX}/lib ${PYTHON} ../wrappers/pyAgrum/testunits/TestSuite.py
