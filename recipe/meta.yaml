@@ -8,10 +8,11 @@ source:
   git_url: git://forge.lip6.fr/aGrUM
   git_tag: {{ version }}
   patches:
+    - fix-tests.patch
     - comma.patch
 
 build:
-  number: 2
+  number: 3
   features:
     - vc14  # [win and py>=35]
   skip: true  # [win and py<35]
