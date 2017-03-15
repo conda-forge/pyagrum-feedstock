@@ -5,10 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  git_url: git://forge.lip6.fr/aGrUM
+  git_url: https://gitlab.com/agrumery/aGrUM.git
   git_tag: {{ version }}
-  patches:
-    - comma.patch
 
 build:
   number: 2
@@ -43,7 +41,7 @@ test:
 
 about:
   home: https://forge.lip6.fr/projects/aGrUM/wiki
-  license: GPLv3
+  license: GPL3
   license_file: COPYRIGHT.txt
   summary: C++ Bayesian networks library
 
