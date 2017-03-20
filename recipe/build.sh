@@ -1,5 +1,7 @@
 #!/bin/sh
 
+git checkout internal/prepare0.11
+
 mkdir build && cd build
 cmake \
   -DCMAKE_PREFIX_PATH=${PREFIX} \
@@ -7,4 +9,4 @@ cmake \
   -DFOR_PYTHON3=${PY3K} \
   ..
 make install -j${CPU_COUNT}
-${PYTHON} ../wrappers/pyAgrum/testunits/TestSuite.py || echo "nook"
+${PYTHON} ../wrappers/pyAgrum/testunits/TestSuite.py
