@@ -1,17 +1,16 @@
-{% set version = "0.10.3" %}
+{% set version = "0.11.1" %}
 
 package:
   name: pyagrum
   version: {{ version }}
 
 source:
-  git_url: git://forge.lip6.fr/aGrUM
-  git_tag: {{ version }}
-  patches:
-    - comma.patch
+  fn: pyagrum-{{ version }}.tar.bz2
+  url: https://gitlab.com/agrumery/aGrUM/repository/archive.tar.bz2?ref={{ version }}
+  sha256: f2e9105464dc1fbb2873ba118244888a978232006eb39beb46b5f2e245a6065b
 
 build:
-  number: 2
+  number: 0
   features:
     - vc14  # [win and py>=35]
   skip: true  # [win and py<35]
@@ -38,12 +37,15 @@ test:
     - pyAgrum
     - pyAgrum.lib.bn2csv
     - pyAgrum.lib.bn2roc
+    - pyAgrum.lib.bn2scores
+    - pyAgrum.lib.bn_vs_bn
     - pyAgrum.lib.dynamicBN
     - pyAgrum.lib.notebook
+    - pyAgrum.lib.pretty_print
 
 about:
-  home: https://forge.lip6.fr/projects/aGrUM/wiki
-  license: GPLv3
+  home: http://agrum.gitlab.io/
+  license: GPL3
   license_file: COPYRIGHT.txt
   summary: C++ Bayesian networks library
 

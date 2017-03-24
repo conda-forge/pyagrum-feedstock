@@ -1,9 +1,9 @@
 About pyagrum
 =============
 
-Home: https://forge.lip6.fr/projects/aGrUM/wiki
+Home: http://agrum.gitlab.io/
 
-Package license: GPLv3
+Package license: GPL3
 
 Feedstock license: BSD 3-Clause
 
