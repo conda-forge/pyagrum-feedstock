@@ -7,7 +7,7 @@ Package license: GPL3
 
 Feedstock license: BSD 3-Clause
 
-Summary: C++ Bayesian networks library
+Summary: A wrapper for the Agrum library, to make flexible and scalable probabilistic graphical models.
 
 
 
