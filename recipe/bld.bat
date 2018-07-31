@@ -1,8 +1,6 @@
 
 mkdir build && cd build
 
-set CMAKE_CONFIG="Release"
-
 cmake -LAH -G"NMake Makefiles"                               ^
     -DCMAKE_PREFIX_PATH="%LIBRARY_PREFIX%"                   ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%"                ^
@@ -11,7 +9,7 @@ cmake -LAH -G"NMake Makefiles"                               ^
     ..
 if errorlevel 1 exit 1
 
-cmake --build . --config %CMAKE_CONFIG% --target install
+cmake --build . --config Release --target install
 if errorlevel 1 exit 1
 
 %PYTHON% ..\wrappers\pyAgrum\testunits\gumTest.py
