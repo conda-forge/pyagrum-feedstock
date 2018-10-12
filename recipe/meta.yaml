@@ -43,6 +43,7 @@ test:
     - pyAgrum.lib.notebook
     - pyAgrum.lib.pretty_print
 
+
 about:
   home: http://agrum.gitlab.io/
   license: GPL3
