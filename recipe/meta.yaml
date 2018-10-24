@@ -23,8 +23,6 @@ requirements:
     - python
     - libpython  # [win]
     - numpy
-    - pydotplus
-    - matplotlib
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -36,14 +34,16 @@ test:
     - ipython
   imports:
     - pyAgrum
-    - pyAgrum.lib.bn2csv
     - pyAgrum.lib.bn2roc
     - pyAgrum.lib.bn2scores
     - pyAgrum.lib.bn_vs_bn
     - pyAgrum.lib.dynamicBN
     - pyAgrum.lib.notebook
     - pyAgrum.lib.pretty_print
-
+  source_files:
+    - wrappers/pyAgrum/testunits/
+  commands:
+    - python wrappers/pyAgrum/testunits/gumTest.py
 
 about:
   home: http://agrum.gitlab.io/

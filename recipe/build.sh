@@ -7,4 +7,3 @@ cmake \
   -DFOR_PYTHON3=${PY3K} \
   ..
 make install -j${CPU_COUNT}
-${PYTHON} ../wrappers/pyAgrum/testunits/gumTest.py
