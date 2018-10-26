@@ -1,4 +1,11 @@
 
+curl -fsSLO https://github.com/openturns/build-agrum/releases/download/v%PKG_VERSION%/agrum-%PKG_VERSION%-py%PY_VER%-x86_64.zip
+7z x agrum-%PKG_VERSION%-py%PY_VER%-x86_64.zip -o%SP_DIR% -y
+%PYTHON% -c "import pyAgrum as gum; bn = gum.fastBN('a->b->d;a->c->d->e;f->b'); bn.generateCPTs(); ie = gum.LazyPropagation(bn); print(ie.posterior('d'))"
+if errorlevel 1 exit 1
+
+exit /b 0
+
 : remove sh.exe from PATH
 set PATH=%PATH:C:\Program Files\Git\usr\bin;=%
 
