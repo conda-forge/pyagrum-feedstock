@@ -1,4 +1,12 @@
 
+curl -fsSLO https://github.com/openturns/build-agrum/releases/download/v%PKG_VERSION%/agrum-%PKG_VERSION%-py%PY_VER%-x86_64.zip
+7z x agrum-%PKG_VERSION%-py%PY_VER%-x86_64.zip -o%SP_DIR% -y
+
+%PYTHON% wrappers\pyAgrum\testunits\gumTest.py
+if errorlevel 1 exit 1
+
+exit 0
+
 : remove sh.exe from PATH
 set PATH=%PATH:C:\Program Files\Git\usr\bin;=%
 
