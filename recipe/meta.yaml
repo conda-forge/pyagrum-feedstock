@@ -10,7 +10,7 @@ source:
   sha256: d424dc35ebf2b3d3a36f4c76bc6bf8fdc635ebbbe5aa2953a091ef0baa8a8086
 
 build:
-  number: 3
+  number: 4
 
 requirements:
   build:
@@ -25,7 +25,7 @@ requirements:
     - numpy
   run:
     - python
-    - {{ pin_compatible('numpy') }}
+    - numpy
     - pydotplus
     - matplotlib
 
