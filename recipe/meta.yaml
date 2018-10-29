@@ -10,13 +10,13 @@ source:
   sha256: d424dc35ebf2b3d3a36f4c76bc6bf8fdc635ebbbe5aa2953a091ef0baa8a8086
 
 build:
-  number: 4
+  number: 5
 
 requirements:
   build:
     - cmake
-    - {{ compiler('c') }}  # [unix]
-    - {{ compiler('cxx') }}  # [unix]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     #- {{ compiler('m2w64_c') }}  # [win]
     #- {{ compiler('m2w64_cxx') }}  # [win]
   host:
