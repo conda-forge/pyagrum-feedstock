@@ -10,7 +10,10 @@ source:
   sha256: d424dc35ebf2b3d3a36f4c76bc6bf8fdc635ebbbe5aa2953a091ef0baa8a8086
 
 build:
-  number: 6
+  number: 7
+  features:
+    - vc9   # [win and py27]
+    - vc14  # [win and py3k]
 
 requirements:
   build:
@@ -27,7 +30,7 @@ requirements:
     - python
     - numpy
     - pydotplus
-    #- matplotlib
+    - matplotlib
 
 test:
   requires:
@@ -37,8 +40,8 @@ test:
     - pyAgrum.lib.bn2roc
     - pyAgrum.lib.bn2scores
     - pyAgrum.lib.bn_vs_bn
-    #- pyAgrum.lib.dynamicBN
-    #- pyAgrum.lib.notebook
+    - pyAgrum.lib.dynamicBN
+    - pyAgrum.lib.notebook
     - pyAgrum.lib.pretty_print
 
 about:
