@@ -11,6 +11,8 @@ source:
 
 build:
   number: 7
+
+  # these are required for now, to be removed on compiler migration
   features:
     - vc9   # [win and py27]
     - vc14  # [win and py3k]
