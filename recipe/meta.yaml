@@ -1,4 +1,4 @@
-{% set version = "0.13.2" %}
+{% set version = "0.13.3" %}
 
 package:
   name: pyagrum
@@ -7,10 +7,10 @@ package:
 source:
   fn: pyagrum-{{ version }}.tar.bz2
   url: https://gitlab.com/agrumery/aGrUM/repository/archive.tar.bz2?ref={{ version }}
-  sha256: d424dc35ebf2b3d3a36f4c76bc6bf8fdc635ebbbe5aa2953a091ef0baa8a8086
+  sha256: cf71e3409d9ba2a10337647c03396f41a951f238f8cf5072f7c5e81e03ebf7b4
 
 build:
-  number: 7
+  number: 0
 
   # these are required for now, to be removed on compiler migration
   features:
