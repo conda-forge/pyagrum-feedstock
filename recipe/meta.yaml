@@ -10,7 +10,10 @@ source:
   sha256: cf71e3409d9ba2a10337647c03396f41a951f238f8cf5072f7c5e81e03ebf7b4
 
 build:
-  number: 1001
+  number: 1002
+  features:
+    - vc9  # [win and py27]
+    - vc14  # [win and py3k]
 
 requirements:
   build:
