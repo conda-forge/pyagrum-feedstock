@@ -29,6 +29,8 @@ conda clean --lock
 
 source run_conda_forge_build_setup
 
+/usr/bin/sudo -n yum install -y mesa-libGL-devel mesa-libGLU-devel libX11-devel libXt-devel libXrender-devel libXext-devel libXdmcp-devel
+
 # make the build number clobber
 make_build_number "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
 
