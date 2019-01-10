@@ -29,7 +29,9 @@ if [ -z "$CONFIG" ]; then
     exit 1
 fi
 
-pip install shyaml
+pip uninstall matplotlib
+python -m pip install --upgrade pip
+pip install matplotlib shyaml
 DOCKER_IMAGE=$(cat "${FEEDSTOCK_ROOT}/.ci_support/${CONFIG}.yaml" | shyaml get-value docker_image.0 condaforge/linux-anvil )
 
 mkdir -p "$ARTIFACTS"
