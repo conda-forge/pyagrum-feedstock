@@ -200,4 +200,5 @@ Feedstock Maintainers
 
 * [@jschueller](https://github.com/jschueller/)
 * [@ltorti](https://github.com/ltorti/)
+* [@aspard](https://github.com/Aspard)
 
