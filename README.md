@@ -3,7 +3,7 @@ About pyagrum
 
 Home: http://agrum.gitlab.io/
 
-Package license: GPL3
+Package license: LGPL3
 
 Feedstock license: BSD 3-Clause
 
@@ -199,7 +199,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@aspard](https://github.com/aspard/)
 * [@jschueller](https://github.com/jschueller/)
 * [@ltorti](https://github.com/ltorti/)
-* [@aspard](https://github.com/Aspard)
-
