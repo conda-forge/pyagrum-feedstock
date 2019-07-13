@@ -18,3 +18,5 @@ zip_keys:
 - - python
   - c_compiler
   - cxx_compiler
+pydotplus:
+- '2.0.2'
