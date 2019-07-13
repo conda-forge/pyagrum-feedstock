@@ -19,6 +19,8 @@ requirements:
   host:
     - python
     - numpy
+    - pydotplus
+    - matplotlib
   run:
     - python
     - numpy
