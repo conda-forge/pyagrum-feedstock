@@ -20,5 +20,3 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - '2.7'
-pydotplus:
-- '2.0.2'
