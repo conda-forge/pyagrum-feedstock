@@ -20,13 +20,13 @@ requirements:
     - python
     - numpy
     - pydotplus
-    - jupyter_client 5.2.4
+    - pyzmq
   run:
     - python
     - numpy
     - pydotplus
     - matplotlib
-    - jupyter_client 5.2.4
+    - pyzmq
 
 test:
   requires:
