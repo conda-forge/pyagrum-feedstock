@@ -20,7 +20,6 @@ requirements:
     - python
     - numpy
     - pydotplus
-    - matplotlib
   run:
     - python
     - numpy
