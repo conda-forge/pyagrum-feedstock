@@ -9,7 +9,7 @@ source:
   url: https://gitlab.com/agrumery/aGrUM/-/archive/{{ version }}/aGrUM-{{ version }}.tar.bz2
   sha256: 8f1897173a17db013eaea5dc85720313a990bffc3268b78f3de406fcc0583083
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -20,13 +20,11 @@ requirements:
     - python
     - numpy
     - pydotplus
-    - pyzmq
   run:
     - python
     - numpy
     - pydotplus
     - matplotlib
-    - pyzmq
 
 test:
   requires:
