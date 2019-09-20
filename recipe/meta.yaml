@@ -20,10 +20,14 @@ requirements:
     - python
     - numpy
     - pydotplus
+    - six
+    - configparser  # [py2k]
   run:
     - python
     - numpy
     - pydotplus
+    - six
+    - configparser  # [py2k]
     - matplotlib
 
 test:
