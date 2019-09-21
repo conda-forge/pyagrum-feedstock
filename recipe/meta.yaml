@@ -7,7 +7,7 @@ package:
 source:
   fn: pyagrum-{{ version }}.tar.bz2
   url: https://gitlab.com/agrumery/aGrUM/-/archive/{{ version }}/aGrUM-{{ version }}.tar.bz2
-  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  sha256: af1b72243a474ce889690d44e12ee1d11ca80a7320357cf01fc44add713b3cec
 build:
   number: 0
 
