@@ -1,4 +1,4 @@
-{% set version = "0.15.0" %}
+{% set version = "0.16.1" %}
 
 package:
   name: pyagrum
@@ -7,8 +7,7 @@ package:
 source:
   fn: pyagrum-{{ version }}.tar.bz2
   url: https://gitlab.com/agrumery/aGrUM/-/archive/{{ version }}/aGrUM-{{ version }}.tar.bz2
-  sha256: c6b96319e27c6ba1a58973fb75c014cc19786513574a48dc7583a7cb15426f55
-
+  sha256: a1204b5d995d5404e1cc67911ed907aab90f2971bd50f495711f39196dc1a014
 build:
   number: 0
 
@@ -20,10 +19,15 @@ requirements:
   host:
     - python
     - numpy
+    - pydotplus
+    - six
+    - configparser  # [py2k]
   run:
     - python
     - numpy
     - pydotplus
+    - six
+    - configparser  # [py2k]
     - matplotlib
 
 test:
