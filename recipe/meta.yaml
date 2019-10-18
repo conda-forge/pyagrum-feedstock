@@ -23,6 +23,7 @@ requirements:
     - six
     - configparser  # [py2k]
     - matplotlib
+    - IPython
   run:
     - python
     - numpy
@@ -30,6 +31,7 @@ requirements:
     - six
     - configparser  # [py2k]
     - matplotlib
+    - IPython
 
 test:
   requires:
