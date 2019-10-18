@@ -22,6 +22,7 @@ requirements:
     - pydotplus
     - six
     - configparser  # [py2k]
+    - matplotlib
   run:
     - python
     - numpy
