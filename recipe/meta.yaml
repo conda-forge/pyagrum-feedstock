@@ -24,6 +24,7 @@ requirements:
     - configparser  # [py2k]
     - matplotlib
     - IPython
+    - ipykernel
   run:
     - python
     - numpy
@@ -32,6 +33,7 @@ requirements:
     - configparser  # [py2k]
     - matplotlib
     - IPython
+    - ipykernel
 
 test:
   requires:
