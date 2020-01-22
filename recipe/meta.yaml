@@ -29,7 +29,6 @@ requirements:
     - IPython
     - ipykernel
     - pandas
-    - scikit-learn
   run:
     - python
     - numpy
@@ -40,7 +39,6 @@ requirements:
     - IPython
     - ipykernel
     - pandas
-    - scikit-learn
 
 test:
   requires:
