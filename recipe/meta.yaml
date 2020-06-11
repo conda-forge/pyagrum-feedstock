@@ -20,6 +20,7 @@ requirements:
     - {{ compiler('c') }}  # [unix]
     - {{ compiler('cxx') }}  # [unix]
     - curl  # [win]
+    - p7zip  # [win]
   host:
     - python
     - numpy
