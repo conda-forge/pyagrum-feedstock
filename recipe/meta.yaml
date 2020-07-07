@@ -10,7 +10,7 @@ source:
   sha256: dc92e3797650608f7d3af639c1edd03ac4e54fec1dd4439d3b0e82c5c0aff507
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('pyagrum', max_pin='x.x') }}
 
