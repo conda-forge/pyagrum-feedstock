@@ -1,3 +1,0 @@
-mesa-libGL-devel
-mesa-libGLU-devel
-xorg-x11-server-Xorg
