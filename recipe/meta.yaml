@@ -8,9 +8,11 @@ source:
   fn: pyagrum-{{ version }}.tar.bz2
   url: https://gitlab.com/agrumery/aGrUM/-/archive/{{ version }}/aGrUM-{{ version }}.tar.bz2
   sha256: b6bb4c60e13c76c3c74397ebfbab759e0453dcf0bc17e3fb6519d40fd1c1cd8b
+  patches:
+    - gumtest.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('pyagrum', max_pin='x.x') }}
 
