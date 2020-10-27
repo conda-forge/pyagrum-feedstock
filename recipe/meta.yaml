@@ -28,7 +28,6 @@ requirements:
     - numpy
     - pydotplus
     - six
-    - configparser  # [py2k]
     - matplotlib-base
     - IPython
     - ipykernel
@@ -38,7 +37,6 @@ requirements:
     - numpy
     - pydotplus
     - six
-    - configparser  # [py2k]
     - matplotlib-base
     - IPython
     - ipykernel
