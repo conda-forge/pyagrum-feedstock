@@ -1,0 +1,16 @@
+diff --git a/wrappers/pyAgrum/testunits/gumTest.py b/wrappers/pyAgrum/testunits/gumTest.py
+index e02c03ad8..32e480c5c 100644
+--- a/wrappers/pyAgrum/testunits/gumTest.py
++++ b/wrappers/pyAgrum/testunits/gumTest.py
+@@ -17,7 +17,10 @@ fh.setFormatter(logging.Formatter(FORMAT))
+ log.addHandler(fh)
+ log.propagate = False
+ 
+-os.chdir(os.path.dirname(__file__ if __file__[0] == '/' else "./" + __file__))
++if os.path.isabs(__file__):
++  os.chdir(os.path.dirname(__file__))
++else:
++  os.chdir(os.path.dirname("./" + __file__))
+ 
+ mod = "standAlone"
+ testNotebooks = False
