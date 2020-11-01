@@ -56,7 +56,7 @@ about:
   home: http://agrum.gitlab.io/
   license: LGPL-3.0-only
   license_file: COPYRIGHT.txt
-  summary: pyAgrum is a Python wrapper for the C++ aGrUM library. It provides a high-level interface to the part of aGrUM allowing to create, model, learn, use, calculate with and embed Bayesian Networks and other graphical models. Some specific (python and C++) codes are added in order to simplify and extend the aGrUM API.
+  summary: pyAgrum is a Python wrapper for the C++ aGrUM library. It provides a high-level interface to the part of aGrUM allowing to create, model, learn, use, calculate with and embed Bayesian Networks and other graphical models. Some specific (Python and C++) codes are added in order to simplify and extend the aGrUM API.
 
 extra:
   recipe-maintainers:
