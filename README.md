@@ -7,7 +7,7 @@ Package license: LGPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyagrum-feedstock/blob/master/LICENSE.txt)
 
-Summary: pyAgrum is a Python wrapper for the C++ aGrUM library. It provides a high-level interface to the part of aGrUM allowing to create, model, learn, use, calculate with and embed Bayesian Networks and other graphical models. Some specific (Python and C++) codes are added in order to simplify and extend the aGrUM API.
+Summary: pyAgrum is a Python wrapper for the C++ aGrUM library. It provides a high-level interface to the part of aGrUM allowing to create, model, learn, use, calculate with and embed Bayesian networks and other graphical models. Some specific (Python and C++) codes are added in order to simplify and extend the aGrUM API.
 
 Current build status
 ====================
