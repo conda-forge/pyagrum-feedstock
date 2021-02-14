@@ -18,7 +18,7 @@ requirements:
   build:
     - cmake
     - {{ compiler('c') }}  # [unix]
-    - {{ compiler('cxx') }}  # [unix]
+    - {{ compiler('cxx') }}  # [unix] 
     - curl  # [win]
     - 7za  # [win]
   host:
