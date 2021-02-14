@@ -1,4 +1,4 @@
-{% set version = "0.19.0" %} 
+{% set version = "0.19.1" %} 
 
 package:
   name: pyagrum
@@ -7,10 +7,10 @@ package:
 source:
   fn: pyagrum-{{ version }}.tar.bz2
   url: https://gitlab.com/agrumery/aGrUM/-/archive/{{ version }}/aGrUM-{{ version }}.tar.bz2
-  sha256: 07e78ab272b79c58b00b5f7f382fdd0c864ecbbf90a93055b054af41611aab88
+  sha256: f7ec617a98811d019fd8f2ce08e6b196953b6bac6d3251ee331f9f8c49188f24
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('pyagrum', max_pin='x.x') }}
 
@@ -18,7 +18,7 @@ requirements:
   build:
     - cmake
     - {{ compiler('c') }}  # [unix]
-    - {{ compiler('cxx') }}  # [unix]
+    - {{ compiler('cxx') }}  # [unix] 
     - curl  # [win]
     - 7za  # [win]
   host:
@@ -48,8 +48,8 @@ test:
     - pyAgrum.lib.bn2roc
     - pyAgrum.lib.bn2scores
     - pyAgrum.lib.bn_vs_bn
-    - pyAgrum.lib.dynamicBN
-    - pyAgrum.lib.notebook
+    # - pyAgrum.lib.dynamicBN
+    # - pyAgrum.lib.notebook
     - pyAgrum.lib.pretty_print
 
 about:
