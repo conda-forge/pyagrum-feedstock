@@ -50,7 +50,6 @@ test:
     - pyAgrum.lib.bn_vs_bn
     - pyAgrum.lib.dynamicBN
     - pyAgrum.lib.notebook
-    - pyAgrum.lib.pretty_print
 
 about:
   home: http://agrum.gitlab.io/
