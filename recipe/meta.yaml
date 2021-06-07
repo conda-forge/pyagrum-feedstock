@@ -30,6 +30,9 @@ requirements:
     - IPython
     - ipykernel
     - pandas
+    - matplotlib-inline
+    - scikit-learn
+    - scipy
   run:
     - python
     - numpy
@@ -39,6 +42,9 @@ requirements:
     - IPython
     - ipykernel
     - pandas
+    - matplotlib-inline
+    - scikit-learn
+    - scipy
 
 test:
   requires:
