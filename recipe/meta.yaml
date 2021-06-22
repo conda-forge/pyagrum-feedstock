@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   run_exports:
-    - {{ pin_subpackage('pyagrum', max_pin='x.x') }}
+    - {{ pin_subpackage('pyagrum', max_pin='x.x.x') }}
 
 requirements:
   build:
