@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  skip: true # [py<37]
   run_exports:
     - {{ pin_subpackage('pyagrum', max_pin='x.x.x') }}
 
