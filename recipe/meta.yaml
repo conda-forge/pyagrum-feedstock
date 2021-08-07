@@ -1,4 +1,4 @@
-{% set version = "0.19.0" %} 
+{% set version = "0.22.0" %} 
 
 package:
   name: pyagrum
@@ -7,18 +7,18 @@ package:
 source:
   fn: pyagrum-{{ version }}.tar.bz2
   url: https://gitlab.com/agrumery/aGrUM/-/archive/{{ version }}/aGrUM-{{ version }}.tar.bz2
-  sha256: 07e78ab272b79c58b00b5f7f382fdd0c864ecbbf90a93055b054af41611aab88
+  sha256: d67cbebeb212c39145e4e6dbe6ef9b73276ce988186d40713138d6a5b0f1ffba
 
 build:
-  number: 1
+  number: 0
   run_exports:
-    - {{ pin_subpackage('pyagrum', max_pin='x.x') }}
+    - {{ pin_subpackage('pyagrum', max_pin='x.x.x') }}
 
 requirements:
   build:
     - cmake
     - {{ compiler('c') }}  # [unix]
-    - {{ compiler('cxx') }}  # [unix]
+    - {{ compiler('cxx') }}  # [unix] 
     - curl  # [win]
     - 7za  # [win]
   host:
@@ -30,6 +30,9 @@ requirements:
     - IPython
     - ipykernel
     - pandas
+    - matplotlib-inline
+    - scikit-learn
+    - scipy
   run:
     - python
     - numpy
@@ -39,6 +42,9 @@ requirements:
     - IPython
     - ipykernel
     - pandas
+    - matplotlib-inline
+    - scikit-learn
+    - scipy
 
 test:
   requires:
@@ -50,7 +56,6 @@ test:
     - pyAgrum.lib.bn_vs_bn
     - pyAgrum.lib.dynamicBN
     - pyAgrum.lib.notebook
-    - pyAgrum.lib.pretty_print
 
 about:
   home: http://agrum.gitlab.io/
