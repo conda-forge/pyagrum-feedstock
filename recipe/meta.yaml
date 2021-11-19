@@ -10,13 +10,16 @@ source:
   sha256: c4afd29ff7e25a1a215c62a86802933189979990dd5ec2c7bd688cd9b459b567
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('pyagrum', max_pin='x.x.x') }}
   skip: true  # [py<37]
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - cmake
     - {{ compiler('c') }}  # [unix]
     - {{ compiler('cxx') }}  # [unix] 
