@@ -7,4 +7,7 @@ cmake ${CMAKE_ARGS} \
   -DBUILD_PYTHON=ON \
   ..
 make install -j${CPU_COUNT}
-${PYTHON} ../wrappers/pyAgrum/testunits/gumTest.py
+if test "${BUILD}" == "${HOST}"
+then
+  ${PYTHON} ../wrappers/pyAgrum/testunits/gumTest.py
+fi
