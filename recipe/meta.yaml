@@ -1,4 +1,4 @@
-{% set version = "0.22.4" %} 
+{% set version = "0.22.5" %} 
 
 package:
   name: pyagrum
@@ -7,13 +7,12 @@ package:
 source:
   fn: pyagrum-{{ version }}.tar.bz2
   url: https://gitlab.com/agrumery/aGrUM/-/archive/{{ version }}/aGrUM-{{ version }}.tar.bz2
-  sha256: 0f9746e7de7221e68e05da631992bf042432b2efb480ecc1d2e2a5df51090612
+  sha256: 86773870de4183c9dd9be96933398f24e995cc68feefa47476e65269e4c3fb05
 
 build:
   number: 0
   run_exports:
     - {{ pin_subpackage('pyagrum', max_pin='x.x.x') }}
-  skip: true  # [py<37]
 
 requirements:
   build:
@@ -21,6 +20,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - cmake
+    - make  # [unix]
     - {{ compiler('c') }}  # [unix]
     - {{ compiler('cxx') }}  # [unix] 
     - curl  # [win]
