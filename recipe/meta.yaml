@@ -29,7 +29,7 @@ requirements:
   host:
     - python
     - numpy
-    - pydotplus
+    - pydot
     - six
     - matplotlib-base
     - IPython
@@ -41,7 +41,7 @@ requirements:
   run:
     - python
     - numpy
-    - pydotplus
+    - pydot
     - six
     - matplotlib-base
     - IPython
