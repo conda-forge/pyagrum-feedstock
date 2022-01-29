@@ -5,12 +5,9 @@
 jobs:
 - job: win
   pool:
-    vmImage: vs2017-win2016
+    vmImage: windows-2019
   strategy:
     matrix:
-      win_64_numpy1.18python3.7.____cpython:
-        CONFIG: win_64_numpy1.18python3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
       win_64_numpy1.18python3.8.____cpython:
         CONFIG: win_64_numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
