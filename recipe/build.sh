@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 # src/cmake/CxxTest.agrum.cmake:2:find_package(Python ${PYAGRUM_REQUIRED_PYTHON_VERSION} COMPONENTS Interpreter)
 sed -i.bak "s|COMPONENTS Interpreter|COMPONENTS Interpreter Development.Module|g" src/cmake/CxxTest.agrum.cmake
 
@@ -10,10 +12,11 @@ cmake ${CMAKE_ARGS} \
   -DBUILD_PYTHON=ON \
   -DPython_FIND_STRATEGY=LOCATION \
   -DPython_ROOT_DIR=${PREFIX} \
-  -DZPYAGRUM_REQUIRED_PYTHON_VERSION=${PY_VER} \
+  -DPYAGRUM_REQUIRED_PYTHON_VERSION=${PY_VER} \
+  -LAH \
   ..
 make install -j${CPU_COUNT}
-if test "${BUILD}" == "${HOST}"
-then
-  ${PYTHON} ../wrappers/pyAgrum/testunits/gumTest.py
-fi
+#if test "${BUILD}" == "${HOST}"
+#then
+#  ${PYTHON} ../wrappers/pyAgrum/testunits/gumTest.py
+#fi
