@@ -1,4 +1,4 @@
-{% set version = "1.12.1" %} 
+{% set version = "1.13.0" %} 
 
 package:
   name: pyagrum
@@ -7,7 +7,7 @@ package:
 source:
   fn: pyagrum-{{ version }}.tar.bz2
   url: https://gitlab.com/agrumery/aGrUM/-/archive/{{ version }}/aGrUM-{{ version }}.tar.bz2
-  sha256: 8cd24c0fae72cb220c69fcbae9ec7035666f3ce26c27e64d2b21be2d643717f6
+  sha256: 214409cb0da5c9e7443765285bfd32452114507eeab8f2e0249edfbf00dbc472
 
 build:
   number: 0
