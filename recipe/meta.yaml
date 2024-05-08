@@ -23,6 +23,7 @@ requirements:
     - cmake
     - make  # [unix]
     - {{ compiler('c') }}  # [unix]
+    - {{ stdlib("c") }}    # [unix]
     - {{ compiler('cxx') }}  # [unix] 
     - curl  # [win]
     - 7za  # [win]
