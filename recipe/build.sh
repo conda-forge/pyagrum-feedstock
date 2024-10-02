@@ -1,8 +1,8 @@
 #!/bin/sh
 
-which python
-echo ${PYTHON}
-echo ${PREFIX}
+if test `uname` == "Darwin"; then
+  export CXXFLAGS="${CXXFLAGS} -fno-assume-unique-vtables"
+fi
 
 mkdir build && cd build
 cmake ${CMAKE_ARGS} \
