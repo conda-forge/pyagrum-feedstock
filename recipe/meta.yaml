@@ -1,4 +1,4 @@
-{% set version = "1.17.0" %} 
+{% set version = "1.17.1" %} 
 
 package:
   name: pyagrum
@@ -7,7 +7,7 @@ package:
 source:
   fn: pyagrum-{{ version }}.tar.bz2
   url: https://gitlab.com/agrumery/aGrUM/-/archive/{{ version }}/aGrUM-{{ version }}.tar.bz2
-  sha256: 5882db4dd28213d75dc0e3273d521ffd02e1223ff6ea754f62e06c3c072cfe76
+  sha256: 32b6e297d906e5b33f6578f730a7db68e28133b3b378b2644eef181a3c76e92e
 
 build:
   number: 0
@@ -67,8 +67,15 @@ about:
   home: http://agrum.gitlab.io/
   license: LGPL-3.0-only
   license_file: COPYRIGHT.txt
-  summary: pyAgrum is a scientific C++ and Python library dedicated to Bayesian Networks and other Probabilistic Graphical Models. It provides a high-level interface to the part of aGrUM allowing to create, model, learn, use, calculate with and embed Bayesian Networks and other graphical models. Some specific (Python and
-    C++) codes are added in order to simplify and extend the aGrUM API.
+  summary: pyAgrum is a scientific C++ and Python library dedicated to Bayesian Networks and other Probabilistic Graphical Models.
+  description: |
+    aGrUM is a C++ library for graphical models. It is designed for easily building applications
+    using graphical models such as Bayesian networks, influence diagrams, decision trees, GAI networks
+    or Markov decision processes. pyAgrum provides a high-level interface to the part of aGrUM allowing
+    to create, model, learn, use, calculate with and embed Bayesian Networks and other graphical models.
+    Some specific (python and C++) codes are added in order to simplify and extend the aGrUM API.
+  doc_url: https://pyagrum.readthedocs.io/
+  dev_url: https://gitlab.com/agrumery/aGrUM
 
 extra:
   recipe-maintainers:
