@@ -20,5 +20,5 @@ cmake ${CMAKE_ARGS} \
 make install -j${CPU_COUNT}
 if test "${BUILD}" == "${HOST}"
 then
-  ${PYTHON} ../wrappers/pyAgrum/testunits/gumTest.py
+  ${PYTHON} ../wrappers/pyagrum/testunits/gumTest.py
 fi

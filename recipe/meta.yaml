@@ -56,12 +56,12 @@ test:
   requires:
     - ipykernel
   imports:
-    - pyAgrum
-    - pyAgrum.lib.bn2roc
-    - pyAgrum.lib.bn2scores
-    - pyAgrum.lib.bn_vs_bn
-    - pyAgrum.lib.dynamicBN
-    - pyAgrum.lib.notebook
+    - pyagrum
+    - pyagrum.lib.bn2roc
+    - pyagrum.lib.bn2scores
+    - pyagrum.lib.bn_vs_bn
+    - pyagrum.lib.dynamicBN
+    - pyagrum.lib.notebook
 
 about:
   home: http://agrum.gitlab.io/
