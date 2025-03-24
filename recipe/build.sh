@@ -16,6 +16,7 @@ cmake ${CMAKE_ARGS} \
   -DPython_FIND_STRATEGY=LOCATION \
   -DPython_ROOT_DIR=${PREFIX} \
   -DPython_INCLUDE_DIR=${PREFIX}/include/python${PY_VER} \
+  -DAGRUM_PYTHON_SABI=OFF \
   ..
 make install -j${CPU_COUNT}
 if test "${BUILD}" == "${HOST}"
