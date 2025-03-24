@@ -69,7 +69,7 @@ about:
   license_file:
     - LICENSE
     - LICENSE.LGPL
-    - LICENCE.MIT
+    - LICENSE.MIT
   license_url: https://gitlab.com/agrumery/aGrUM/-/blob/master/LICENSE
   summary: pyAgrum is a scientific C++ and Python library dedicated to Bayesian Networks and other Probabilistic Graphical Models.
   description: |
