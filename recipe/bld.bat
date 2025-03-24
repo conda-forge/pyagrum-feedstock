@@ -5,5 +5,5 @@ if errorlevel 1 exit 1
 7za x agrum-%PKG_VERSION%-py%PY_VER%-x86_64.zip -o%SP_DIR% -y
 if errorlevel 1 exit 1
 
-%PYTHON% wrappers\pyAgrum\testunits\gumTest.py
+%PYTHON% wrappers\pyagrum\testunits\gumTest.py
 if errorlevel 1 exit 1
