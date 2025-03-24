@@ -65,7 +65,7 @@ test:
 
 about:
   home: http://agrum.gitlab.io/
-  license: LGPL-3.0 OR MIT
+  license: LGPL-3.0-only OR MIT
   license_file:
     - LICENSE
     - LICENSE.LGPL
