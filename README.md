@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyagrum-feedsto
 
 Home: http://agrum.gitlab.io/
 
-Package license: [LGPL-3.0](https://github.com/conda-forge/pyagrum-feedstock/blob/main/recipe/LICENSE.LGPL) OR [MIT](https://github.com/conda-forge/pyagrum-feedstock/blob/main/recipe/LICENSE.MIT)
+Package license: [LGPL-3.0 OR MIT](https://gitlab.com/agrumery/aGrUM/-/blob/master/LICENSE)
 
 Summary: pyAgrum is a scientific C++ and Python library dedicated to Bayesian Networks and other Probabilistic Graphical Models.
 
