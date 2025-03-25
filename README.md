@@ -19,6 +19,18 @@ or Markov decision processes. pyAgrum provides a high-level interface to the par
 to create, model, learn, use, calculate with and embed Bayesian Networks and other graphical models.
 Some specific (python and C++) codes are added in order to simplify and extend the aGrUM API.
 
+Since pyAgrum 2.0.0, the package name follows PEP8 rules and is now pyagrum (lowercase).
+
+Please use:
+
+  import pyagrum
+
+Instead of:
+
+  import pyAgrum
+
+See the CHANGELOG (https://gitlab.com/agrumery/aGrUM/-/blob/master/CHANGELOG.md?ref_type=heads#changelog-for-200) for more details.
+
 
 Current build status
 ====================
