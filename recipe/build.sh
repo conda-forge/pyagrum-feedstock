@@ -1,9 +1,5 @@
 #!/bin/sh
 
-which python
-echo ${PYTHON}
-echo ${PREFIX}
-
 if test `uname` == "Darwin"; then
   export CXXFLAGS="${CXXFLAGS} -fno-assume-unique-vtables"
 fi
@@ -13,19 +9,18 @@ if [[ "${target_platform}" == osx-* ]]; then
     CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 fi
 
-mkdir build && cd build
 cmake ${CMAKE_ARGS} \
   -DCMAKE_PREFIX_PATH=${PREFIX} \
   -DCMAKE_INSTALL_PREFIX=${PREFIX} \
+  -DCMAKE_UNITY_BUILD=ON \
   -DBUILD_PYTHON=ON \
   -DPython_FIND_STRATEGY=LOCATION \
   -DPython_ROOT_DIR=${PREFIX} \
-  -DPython_INCLUDE_DIR=${PREFIX}/include/python${PY_VER} \
   -DAGRUM_PYTHON_SABI=OFF \
-  ..
-make install -j${CPU_COUNT}
+  -B build .
+cmake --build build --target install --parallel ${CPU_COUNT}
 
 if test "${BUILD}" == "${HOST}"
 then
-  ${PYTHON} ../wrappers/pyagrum/testunits/gumTest.py
+  ${PYTHON} ./wrappers/pyagrum/testunits/gumTest.py
 fi
