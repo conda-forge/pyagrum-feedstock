@@ -1,8 +1,15 @@
-
-curl -fsSLO https://github.com/openturns/build-agrum/releases/download/v%PKG_VERSION%/agrum-%PKG_VERSION%-py%PY_VER%-x86_64.zip
+cmake -LAH -G "Ninja" ^
+    -DCMAKE_PREFIX_PATH="%LIBRARY_PREFIX%" ^
+    -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
+    -DBUILD_PYTHON=ON ^
+    -DPython_FIND_STRATEGY=LOCATION ^
+    -DPython_ROOT_DIR="%PREFIX%" ^
+    -DINSTALL_PYTHONDIR=../Lib/site-packages ^
+    -DAGRUM_PYTHON_SABI=OFF ^
+    -B build .
 if errorlevel 1 exit 1
 
-7za x agrum-%PKG_VERSION%-py%PY_VER%-x86_64.zip -o%SP_DIR% -y
+cmake --build build --target install --config Release --parallel %CPU_COUNT%
 if errorlevel 1 exit 1
 
 %PYTHON% wrappers\pyagrum\testunits\gumTest.py
