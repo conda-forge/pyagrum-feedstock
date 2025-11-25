@@ -22,6 +22,7 @@ requirements:
     - cmake
     - make  # [unix]
     - ninja  # [win]
+    - swig
     - {{ compiler('c') }}  # [unix]
     - {{ stdlib("c") }}    # [unix]
     - {{ compiler('cxx') }}  # [unix] 
