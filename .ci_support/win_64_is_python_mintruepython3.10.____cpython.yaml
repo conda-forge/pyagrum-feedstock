@@ -2,6 +2,10 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
+is_abi3:
+- true
+is_python_min:
+- true
 numpy:
 - '2'
 pin_run_as_build:
@@ -9,6 +13,9 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.13.* *_cp313
+- 3.10.* *_cpython
 target_platform:
 - win-64
+zip_keys:
+- - python
+  - is_python_min
