@@ -57,6 +57,7 @@ requirements:
 test:
   requires:
     - ipykernel
+    - abi3audit  # [is_abi3]
   imports:
     - pyagrum
     - pyagrum.lib.bn2roc
@@ -64,6 +65,8 @@ test:
     - pyagrum.lib.bn_vs_bn
     - pyagrum.lib.dynamicBN
     - pyagrum.lib.notebook
+  commands:
+    - abi3audit $SP_DIR/pyagrum/_pyagrum.so -s -v --assume-minimum-abi3 3.10  # [unix and is_abi3]
 
 about:
   home: http://agrum.gitlab.io/
