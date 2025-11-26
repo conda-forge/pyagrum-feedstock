@@ -16,7 +16,7 @@ cmake ${CMAKE_ARGS} \
   -DBUILD_PYTHON=ON \
   -DPython_FIND_STRATEGY=LOCATION \
   -DPython_ROOT_DIR=${PREFIX} \
-  -DAGRUM_PYTHON_SABI=OFF \
+  -DAGRUM_PYTHON_SABI=ON \
   -B build .
 cmake --build build --target install --parallel ${CPU_COUNT}
 
