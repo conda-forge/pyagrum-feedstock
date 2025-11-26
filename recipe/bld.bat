@@ -7,7 +7,7 @@ cmake -LAH -G "Ninja" ^
     -DPython_FIND_STRATEGY=LOCATION ^
     -DPython_ROOT_DIR="%PREFIX%" ^
     -DINSTALL_PYTHONDIR="%SP_DIR:\=/%" ^
-    -DAGRUM_PYTHON_SABI=OFF ^
+    -DAGRUM_PYTHON_SABI=ON ^
     -B build .
 if errorlevel 1 exit 1
 
