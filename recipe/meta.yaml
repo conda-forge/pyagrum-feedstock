@@ -10,7 +10,7 @@ source:
   sha256: 9b55a129c37c7c375204d9e851cedfe977319bdf3e9cc971c0f67219b9721ae2
 
 build:
-  number: 2
+  number: 3
   run_exports:
     - {{ pin_subpackage('pyagrum', max_pin='x.x.x') }}
   python_version_independent: true  # [is_abi3]
@@ -51,7 +51,7 @@ requirements:
     - ipykernel
     - pandas
     - matplotlib-inline
-    - scikit-learn
+    - scikit-learn >=1.7
     - scipy
 
 test:
