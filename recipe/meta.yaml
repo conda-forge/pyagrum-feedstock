@@ -1,4 +1,4 @@
-{% set version = "2.3.0" %} 
+{% set version = "2.3.1" %} 
 
 package:
   name: pyagrum
@@ -7,10 +7,10 @@ package:
 source:
   fn: pyagrum-{{ version }}.tar.bz2
   url: https://gitlab.com/agrumery/aGrUM/-/archive/{{ version }}/aGrUM-{{ version }}.tar.bz2
-  sha256: 9b55a129c37c7c375204d9e851cedfe977319bdf3e9cc971c0f67219b9721ae2
+  sha256: b8c51b4d32539cf7b9e523c30e832f4e535148174c86e623fbd6392c4ba4405d
 
 build:
-  number: 3
+  number: 0
   run_exports:
     - {{ pin_subpackage('pyagrum', max_pin='x.x.x') }}
   python_version_independent: true  # [is_abi3]
@@ -39,7 +39,7 @@ requirements:
     - ipykernel
     - pandas
     - matplotlib-inline
-    - scikit-learn
+    - scikit-learn >=1.7
     - scipy
   run:
     - python
