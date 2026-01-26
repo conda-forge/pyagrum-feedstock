@@ -10,7 +10,7 @@ source:
   sha256: c7cb9988a015b9abe29fb008e73d89f54dd0e3826550e7a3910fdcdd245c0484
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('pyagrum', max_pin='x.x.x') }}
   python_version_independent: true  # [is_abi3]
