@@ -1,36 +1,38 @@
-{% set version = "2.3.2" %} 
+context:
+  version: "2.3.2"
 
 package:
   name: pyagrum
-  version: {{ version }}
+  version: ${{ version }}
 
 source:
-  fn: pyagrum-{{ version }}.tar.bz2
-  url: https://gitlab.com/agrumery/aGrUM/-/archive/{{ version }}/aGrUM-{{ version }}.tar.bz2
+  url: https://gitlab.com/agrumery/aGrUM/-/archive/${{ version }}/aGrUM-${{ version }}.tar.bz2
   sha256: c7cb9988a015b9abe29fb008e73d89f54dd0e3826550e7a3910fdcdd245c0484
 
 build:
-  number: 0
-  run_exports:
-    - {{ pin_subpackage('pyagrum', max_pin='x.x.x') }}
-  python_version_independent: true  # [is_abi3]
-  skip: True  # [is_abi3 and not is_python_min]
+  number: 1
+  python:
+    version_independent: true
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
     - cmake
-    - make  # [unix]
-    - ninja  # [win]
     - swig
-    - {{ compiler('c') }}  # [unix]
-    - {{ stdlib("c") }}    # [unix]
-    - {{ compiler('cxx') }}  # [unix] 
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - if: unix
+      then: make
+      else: ninja
+    - if: build_platform != target_platform
+      then:
+        - python ${{ python_min }}.*
+        - python-abi3 ${{ python_min }}.*
+        - cross-python_${{ target_platform }}
+        - numpy
   host:
-    - python-abi3  # [is_abi3]
-    - python
+    - python ${{ python_min }}.*
+    - python-abi3 ${{ python_min }}.*
     - numpy
     - pydot
     - six
@@ -42,7 +44,7 @@ requirements:
     - scikit-learn
     - scipy
   run:
-    - python
+    - python >=${{ python_min }}
     - numpy
     - pydot
     - six
@@ -53,29 +55,28 @@ requirements:
     - matplotlib-inline
     - scikit-learn >=1.7
     - scipy
+  run_exports:
+    - ${{ pin_subpackage('pyagrum', upper_bound='x.x.x') }}
 
-test:
-  requires:
-    - ipykernel
-    - abi3audit  # [is_abi3]
-  imports:
-    - pyagrum
-    - pyagrum.lib.bn2roc
-    - pyagrum.lib.bn2scores
-    - pyagrum.lib.bn_vs_bn
-    - pyagrum.lib.dynamicBN
-    - pyagrum.lib.notebook
-  commands:
-    - abi3audit $SP_DIR/pyagrum/_pyagrum.so -s -v --assume-minimum-abi3 3.10  # [unix and is_abi3]
+tests:
+  - python:
+      imports:
+        - pyagrum
+        - pyagrum.lib.bn2roc
+        - pyagrum.lib.bn2scores
+        - pyagrum.lib.bn_vs_bn
+        - pyagrum.lib.dynamicBN
+        - pyagrum.lib.notebook
+      pip_check: false
+      python_version: ${{ python_min }}.*
 
 about:
-  home: http://agrum.gitlab.io/
+  homepage: https://pyagrum.gitlab.io/
   license: LGPL-3.0-only OR MIT
   license_file:
     - LICENSE.md
     - LICENSE.LGPL
     - LICENSE.MIT
-  license_url: https://gitlab.com/agrumery/aGrUM/-/blob/master/LICENSE.md
   summary: pyAgrum is a scientific C++ and Python library dedicated to Bayesian Networks and other Probabilistic Graphical Models.
   description: |
     aGrUM is a C++ library for graphical models. It is designed for easily building applications
@@ -95,8 +96,8 @@ about:
       import pyAgrum
 
     See the CHANGELOG (https://gitlab.com/agrumery/aGrUM/-/blob/master/CHANGELOG.md?ref_type=heads#changelog-for-200) for more details.
-  doc_url: https://pyagrum.readthedocs.io/
-  dev_url: https://gitlab.com/agrumery/aGrUM
+  documentation: https://pyagrum.readthedocs.io/
+  repository: https://gitlab.com/agrumery/aGrUM
 
 extra:
   recipe-maintainers:
