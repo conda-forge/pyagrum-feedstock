@@ -1,3 +1,6 @@
+set PYTHONUTF8=1
+set PYTHONIOENCODING=utf-8
+
 cmake -LAH -G "Ninja" ^
     -DCMAKE_PREFIX_PATH="%LIBRARY_PREFIX:\=/%%" ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX:\=/%%" ^
@@ -8,6 +11,7 @@ cmake -LAH -G "Ninja" ^
     -DPython_ROOT_DIR="%PREFIX%" ^
     -DINSTALL_PYTHONDIR="%SP_DIR:\=/%" ^
     -DAGRUM_PYTHON_SABI=ON ^
+    -DCMAKE_CXX_FLAGS="/utf-8" ^
     -B build .
 if errorlevel 1 exit 1
 
