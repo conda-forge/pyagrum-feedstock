@@ -10,10 +10,13 @@ cmake ${CMAKE_ARGS} \
   -DCMAKE_INSTALL_PREFIX=${PREFIX} \
   -DCMAKE_UNITY_BUILD=ON \
   -DBUILD_PYTHON=ON \
-  -DPython_FIND_STRATEGY=LOCATION \
-  -DPython_ROOT_DIR=${PREFIX} \
   -DAGRUM_PYTHON_SABI=ON \
-  -B build .
+  -DPython_EXECUTABLE=${PREFIX}/bin/python \
+  -DPython_INCLUDE_DIR=${PREFIX}/include \
+  -DPython_NumPy_INCLUDE_DIR=${PREFIX}/lib/python${PY_VER}/site-packages/numpy/core/include \
+  -DPython_FIND_STRATEGY=LOCATION \
+  -B build
+
 cmake --build build --target install --parallel ${CPU_COUNT}
 
 if test "${BUILD}" == "${HOST}"
