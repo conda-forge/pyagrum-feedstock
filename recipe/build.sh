@@ -14,7 +14,7 @@ else
     CMAKE_PYTHON_ARGS=()
 fi
 
-find ${PREFIX} -path "*/numpy/core/include"
+find $PREFIX -name "arrayobject.h"
 
 cmake ${CMAKE_ARGS} \
   "${CMAKE_PYTHON_ARGS[@]}" \
