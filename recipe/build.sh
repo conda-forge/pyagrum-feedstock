@@ -14,6 +14,8 @@ else
     CMAKE_PYTHON_ARGS=()
 fi
 
+find ${PREFIX} -path "*/numpy/core/include"
+
 cmake ${CMAKE_ARGS} \
   "${CMAKE_PYTHON_ARGS[@]}" \
   -DCMAKE_PREFIX_PATH=${PREFIX} \
