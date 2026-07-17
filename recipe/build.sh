@@ -7,7 +7,7 @@ if [[ "${BUILD}" != "${HOST}" ]]; then
     CMAKE_PYTHON_ARGS=(
         -DPython_EXECUTABLE="${PREFIX}/bin/python"
         -DPython_INCLUDE_DIR="${PREFIX}/include/python${PY_VER}"
-        -DPython_NumPy_INCLUDE_DIR="${PREFIX}/lib/python${PY_VER}/site-packages/numpy/core/include"
+        -DPython_NumPy_INCLUDE_DIR="${PREFIX}/lib/python${PY_VER}/site-packages/numpy/_core/include"
         -DPython_FIND_STRATEGY=LOCATION
     )
 else
