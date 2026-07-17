@@ -10,11 +10,10 @@ cmake ${CMAKE_ARGS} \
   -DCMAKE_INSTALL_PREFIX=${PREFIX} \
   -DCMAKE_UNITY_BUILD=ON \
   -DBUILD_PYTHON=ON \
-  -DAGRUM_PYTHON_SABI=ON \
-  -DPython_ROOT_DIR=${PREFIX}
   -DPython_FIND_STRATEGY=LOCATION \
-  -B build
-
+  -DPython_ROOT_DIR=${PREFIX} \
+  -DAGRUM_PYTHON_SABI=ON \
+  -B build .
 cmake --build build --target install --parallel ${CPU_COUNT}
 
 if test "${BUILD}" == "${HOST}"
