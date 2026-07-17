@@ -35,7 +35,7 @@ requirements:
     - python ${{ python_min }}.*
     - python-abi3 ${{ python_min }}.*
     - numpy
-    - pydot
+    - pydot >=2.0
     - six
     - matplotlib-base
     - IPython
@@ -47,7 +47,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - numpy
-    - pydot
+    - pydot >=2.0
     - six
     - matplotlib-base
     - IPython
