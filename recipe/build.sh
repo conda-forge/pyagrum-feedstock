@@ -12,7 +12,6 @@ cmake ${CMAKE_ARGS} \
   -DBUILD_PYTHON=ON \
   -DAGRUM_PYTHON_SABI=ON \
   -DPython_ROOT_DIR=${PREFIX}
-  -DPython_NumPy_INCLUDE_DIR=lib/python${PY_VER}/site-packages/numpy/core/include \
   -DPython_FIND_STRATEGY=LOCATION \
   -B build
 
