@@ -27,7 +27,4 @@ cmake ${CMAKE_ARGS} \
 
 cmake --build build --target install --parallel ${CPU_COUNT}
 
-if test "${BUILD}" == "${HOST}"
-then
-  ${PYTHON} ./wrappers/pyagrum/testunits/gumTest.py
-fi
+${PYTHON} ./wrappers/pyagrum/testunits/gumTest.py
