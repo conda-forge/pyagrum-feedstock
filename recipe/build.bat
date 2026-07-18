@@ -12,7 +12,7 @@ cmake -LAH -G "Ninja" ^
     -DPython_ROOT_DIR="%PREFIX%" ^
     -DINSTALL_PYTHONDIR="%SP_DIR:\=/%" ^
     -DAGRUM_PYTHON_SABI=ON ^
-    -DCMAKE_CXX_FLAGS="/utf-8" ^
+    -DCMAKE_CXX_FLAGS="/utf-8 /EHsc" ^
     -B build .
 if errorlevel 1 exit 1
 
