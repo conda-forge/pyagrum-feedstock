@@ -69,7 +69,9 @@ tests:
         - pyagrum.lib.dynamicBN
         - pyagrum.lib.notebook
       pip_check: false
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://pyagrum.gitlab.io/
