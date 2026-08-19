@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://gitlab.com/agrumery/aGrUM/-/archive/${{ version }}/aGrUM-${{ version }}.tar.bz2
-  sha256: 7165c282fdf5b5bf9a262c5201607881d5dfb1ed59eb21a38aa9a63c1bba9427
+  sha256: 48ac61ec6f3743f03c7c9e9e017ee98b9392559149115d059c808f4e3add6774
 
 build:
-  number: 0
+  number: 1
   python:
     version_independent: true
 
