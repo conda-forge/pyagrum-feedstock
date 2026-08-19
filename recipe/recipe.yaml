@@ -1,5 +1,5 @@
 context:
-  version: "3.1.0"
+  version: "3.1.1"
 
 package:
   name: pyagrum
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/agrumery/aGrUM/-/archive/${{ version }}/aGrUM-${{ version }}.tar.bz2
-  sha256: acb72212e2b996a7439840377c64268e2e8ae0f83c5cf29110f3119932a0dce5
+  sha256: 7165c282fdf5b5bf9a262c5201607881d5dfb1ed59eb21a38aa9a63c1bba9427
 
 build:
   number: 0
