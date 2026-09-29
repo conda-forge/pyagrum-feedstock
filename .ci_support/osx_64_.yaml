@@ -23,7 +23,7 @@ macos_machine:
 numpy:
 - '2'
 python_min:
-- '3.10'
+- '3.11'
 target_platform:
 - osx-64
 zip_keys:
