@@ -1,5 +1,5 @@
 context:
-  version: "3.3.2"
+  version: "3.4.0"
 
 package:
   name: pyagrum
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/agrumery/aGrUM/-/archive/${{ version }}/aGrUM-${{ version }}.tar.bz2
-  sha256: e1930ab0372d07c3f384bc0f27fd1ba250b1a0c799eda501bbae422936528a9b
+  sha256: d994070f09efd43617c4ccead9c38e9f937913bd37bc40dc2cdfacc4a09eed7d
 
 build:
   number: 0
@@ -89,7 +89,7 @@ about:
     Some specific (python and C++) codes are added in order to simplify and extend the aGrUM API.
 
     Since pyAgrum 2.0.0, the package name follows PEP8 rules and is now pyagrum (lowercase). 
-    
+
     Please use:
       
       import pyagrum
